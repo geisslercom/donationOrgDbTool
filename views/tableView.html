@@ -1,0 +1,61 @@
+<div id="edit_field" class="edit_field">
+                <div class="gradient headerback">
+                   <ul>
+                      <li><a  href="#tab1">Neuer Eintrag</a></li>                    
+                      <li><a onClick="getCreateDataView()" href="#tab3">Erweiterte Suche</a></li>
+                    </ul>
+                </div>
+                <div id="tab1" class="inlineBorder">
+                    <div id="inputfield">Bitte wählen sie eine Tabelle aus.</div>
+                </div>                
+                <div id="tab3" class="inlineBorder">
+                    <div id="adv_field">
+                        <div id="adv_search_text">
+                            <p>Gespendete Summe (pro Person) ab einer Höhe von: </p>
+                            <p>Spenden einer Person von: </p>
+                            <p>Spenden aus einem Zeitraum von:</p>
+                            <p>Ausgabe der gesamten Spendensumme</p>
+                        </div>
+                        <div id="adv_search_input">
+                           <form>
+                               <input type="text" name="summe" placeholder="Summe" required>
+                               <input type="button" onclick="setAdvSearch(this,'sql_spendenhöhe_pp');" value="Anzeige"> <br />
+                           </form>
+                           <form>
+                               <input type="number" name="name_asc" placeholder="Kundennummer" required>
+                               <input type="button" onclick="setAdvSearch(this,'sql_stammdaten_sel_asc');" name="btn_name_asc" value="Anzeigen"> <br />
+                           </form>
+                           <form>
+                               <input type="text" class="datepicker" name="vondatum" placeholder="Datum" required> bis: 
+                               <input type="text" class="datepicker" name="bisdatum" placeholder="Datum" required>
+                               <input type="button" onclick="setAdvSearch(this,'sql_spendeneingang_tim');"name="btn_datum" value="Anzeigen"> <br />
+                           </form>
+                           <input type="button" onClick="show_table('none', 'sql_spendenhöhe_gesamt')" name="btn_gesamt" value="Anzeigen"> <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="whiteBorder">
+            <div class="inlineBorder">
+                  <div id="main_content">
+                      <div id="table_content">
+                          <form id="table_form">
+                            <table class='tbl_view' id='tbl_sort'>
+                              <thead>
+                                  <tr id="headline">
+                                      <th></th>
+                                  </tr>
+                                  <tr id="searchline">
+                                      <td>
+                                         <!-- <input type='submit' name='search_submit' value='Suchen' /> -->
+                                      </td>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                              </tbody>
+                            </table>
+                          </form>
+                      </div>
+                  </div>
+            </div>
+            </div>
